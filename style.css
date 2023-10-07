@@ -1,0 +1,386 @@
+/* universal selector */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+/* tag selector */
+body{
+    background-color: aliceblue;
+display: flex;
+align-items: center;
+justify-content: center;
+min-height: 100vh;
+}
+.profile
+{
+    position:relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255,225,225,0.2);  
+}
+.profile  .img
+{
+  position:relative; 
+  /*set position acc to itself while absolute set acc to parent */
+  /* setting img width and height */
+  width: 150px;
+  height: 200px;
+  /* circle the img */
+  border-radius: 50%; 
+  overflow: hidden;  /* to bring text infront of img */
+}
+
+.profile .img  img
+{ 
+position: absolute;
+top: 0;
+left:0;
+width:100% ;
+height: 100%;
+object-fit: cover;/*setting the img in the defined height n width */
+
+}
+
+.profile h2 /* setting the h2 heading properties */
+{
+   color: #fff; 
+   font-size: 1.5rem;
+   margin-top: 20px;
+   text-transform: uppercase;
+   text-align: center;
+   font-weight: 600px;
+   line-height: 1.4em; /* creating line */
+}
+
+.profile h2 span 
+{
+font: size 0.8em; 
+font-weight: 300;
+color: #fff;
+}
+.contactInfo
+{
+    /*it create 40px gap from line to contactinfo*/
+    padding-top: 40px; 
+}
+.title
+{
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    /*it create 20px gap from line contactinfo to list items*/
+    margin-bottom: 20px;
+}
+
+.contactInfo ul
+{
+    position: relative;
+}
+.contactInfo ul li
+{
+position: relative;
+list-style:none ;
+margin: 10px 0;
+cursor: pointer;
+}
+
+.contactInfo ul li .icon
+{
+   display: inline-block;
+   width: 30px; 
+   font-size: 18px;
+   color: aqua;
+}
+
+.contactInfo ul li span
+{ 
+    color: #fff;
+    font-weight: 300;
+}
+/* for linkedin */
+.contactInfo ul li span a
+{ 
+    color: #fff;
+    font-weight: 300;
+    text-decoration: none;
+}
+.contactInfo.education  li
+{
+/*creating 15pxgap between all li  */
+margin-bottom: 15px;
+}
+
+.contactInfo.education h5 
+{
+color: #03a9f4;
+font-weight: 500;
+}
+
+.contactInfo.education h4:nth-child(2)
+{
+color:#fff;
+font-weight: 500;
+}
+
+.contactInfo.education h4
+{
+color:#fff;
+font-weight: 300;
+}
+.contactInfo.languages .percent
+{
+  position:relative;  
+  width:100%;
+  height:6px;
+  background:black;
+  display: block;
+  margin-top: 5px;
+}
+.contactInfo.languages .percent  div
+{
+   position: absolute; 
+   top:0;
+   left:0;
+   height: 100%;
+   background:#03a9f4 ;
+}
+
+.container
+{
+position: relative;
+width:100%;
+max-width: 1000px;
+min-height: 1000px;  /*it give height to both side boxes  */
+background-color: white;
+display: grid;
+grid-template-columns: 1fr 2fr;/*it give one by 2 waitage to both box one big other small  */
+box-shadow:0 35px 55px rgba(0,0,0,0.1) ;
+}
+
+.container  .leftside
+{
+    position: relative;
+    padding: 40px;
+    background-color: #003147;
+
+}
+
+
+.container  .rightside
+{
+    position: relative;
+    padding: 40px;
+    background-color:#fff;
+
+}
+
+.about
+{
+    /* add margin top */
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.about:last-child
+{
+    margin-bottom: 0;
+}
+ .title2
+ {
+   color:#003147;
+   text-transform: uppercase; 
+   letter-spacing: 1px;
+   margin-bottom: 10px;
+ }
+
+ p
+ {
+    color:#333;
+ }
+
+ .about .box
+ {
+    /*it give space between txt and display years and company names using class box in class about otherwise it was displayging just like heading of text in p  */
+    display:flex;
+    flex-direction: row;
+ }
+
+ /* this width creat space b/w year company name one side and text in that on other side  */
+ .about .box .year_company
+ {
+    min-width: 150px;
+ }
+
+ /* it give that side years and company name light gray color */
+ .about .box .year_company h5
+ {
+    text-transform: uppercase;
+    color:#848c90;
+    font-weight: 600;
+ }
+
+ /* it change all class text h4 to blue color */
+ .about .box .text h4
+ {
+    text-transform: uppercase;
+    color:#2a7da2 ;
+    font-size: 16px;
+ }
+
+ /* it center all boc class element present in class skills */
+ .skills  .box
+ {
+position: relative;
+width:100%;
+display: grid;
+grid-template-columns: 150px 1fr;
+justify-content: center;
+align-items: center;
+ }
+
+ /* it change all h4color to gray present in box class onnly in class skills to  color */
+ .skills .box h4
+ {
+    text-transform: uppercase;
+    color: #848c90;
+    font-weight: 500;
+    /* give space between all h4 also in line bars respectively */
+    margin-bottom: 15px;
+ }
+
+ /* it change all class text h4 to blue color */
+ .skills .box .percent
+ {
+    position: relative;
+    text-transform: uppercase;
+    background:#d2d2d6;
+    width:100%;
+    height:10px;
+ }
+
+ /* it change br color to blue color */
+ .skills .box .percent div
+ {
+    position: absolute;
+    top: 0;
+    left:0;
+    height:100%;
+    background: #03a9f4;
+ }
+
+ /* it convert the  */
+ .interest ul
+ {
+    display: grid;
+    grid-template-columns: repeat(4,1fr) ;
+ }
+
+ .interest ul li
+ { 
+   list-style: none; 
+   color: #333;
+   font-weight: 500;
+   margin: 10px 0;
+ }
+
+ .interest ul li .fa
+ {
+    color:#03a9f4;
+    font-size: 18px;
+    width: 20px ;
+ }
+
+/* projects style added */
+
+.projects .box
+ {
+    /*it give space between txt and display years and company names using class box in class about otherwise it was displayging just like heading of text in p  */
+    display:flex;
+    flex-direction:row;
+ }
+
+ /* this width creat space b/w year company name one side and text in that on other side  */
+ .projects .box .year_project
+ {
+    min-width: 150px;
+ }
+
+ /* it give that side years and company name light gray color */
+ .projects .box .year_project h5
+ {
+    text-transform: uppercase;
+    color:#848c90;
+    font-weight: 600;
+    margin: 15px;  
+
+    /* creating gap */
+ }
+
+ /* it center all boc class element present in class skills */
+ .projects  .box
+ {
+position: relative;
+width:100%;
+display: grid;
+grid-template-columns: 150px 1fr;
+justify-content: center;
+align-items: center;
+ }
+
+ /* it change all h4color to gray present in box class onnly in class skills to  color */
+ .projects .box h4
+ {
+    text-transform: uppercase;
+    color: #848c90;
+    font-weight: 500;
+    /* give space between all h4 also in line bars respectively */
+    margin-bottom: 15px;
+ }
+
+
+
+ /* adding responsiveness */
+
+ @media (max-width: 1000px)
+ {
+    .container
+    {
+        margin: 10px;
+        grid-template-columns: repeat(1,1fr);
+    }
+/* split intrest icons and text in two- two */
+    .interest ul
+    {
+     grid-template-columns: repeat(2,1fr);
+    }
+ }
+
+@media(max-width:600px)
+{
+    .about .box
+    {
+flex-direction:column ;
+    }
+
+    .about .box  .year_company
+    {
+        min-width: 150px;
+        margin-bottom: 5px;
+    }
+
+    .interest ul
+    { 
+grid-template-columns: repeat(1,1fr);
+    }
+
+    .skills .box
+    {
+        grid-template-columns: repeat(1,1fr);
+    }
+}
